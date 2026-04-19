@@ -176,7 +176,7 @@ export default function FileUpload() {
             </svg>
           </div>
           <h2 className="text-xl font-semibold text-gray-700 mb-2">
-            Story Plotter Viewer & Editor
+            StoryBridge AI
           </h2>
           <p className="text-gray-500 mb-6">
             Drop your Story Plotter export file here or click to browse
