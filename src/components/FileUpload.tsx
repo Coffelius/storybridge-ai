@@ -1,7 +1,14 @@
 "use client";
 
 import { useStory } from "@/context/StoryContext";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
+
+const STORAGE_KEY = "storyplotter-viewer-data";
+
+function readStoredFlag(): boolean {
+  if (typeof window === "undefined") return false;
+  return !!window.localStorage.getItem(STORAGE_KEY);
+}
 
 export default function FileUpload() {
   const {
@@ -16,15 +23,7 @@ export default function FileUpload() {
     clearStorage,
   } = useStory();
 
-  const [hasStoredData, setHasStoredData] = useState(false);
-
-  // Check for stored data on mount
-  useEffect(() => {
-    if (!data) {
-      const hasStored = localStorage.getItem("storyplotter-viewer-data");
-      setHasStoredData(!!hasStored);
-    }
-  }, [data]);
+  const [hasStoredData, setHasStoredData] = useState(readStoredFlag);
 
   const handleFileChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -176,7 +175,7 @@ export default function FileUpload() {
             </svg>
           </div>
           <h2 className="text-xl font-semibold text-gray-700 mb-2">
-            Story Plotter Viewer & Editor
+            StoryBridge AI
           </h2>
           <p className="text-gray-500 mb-6">
             Drop your Story Plotter export file here or click to browse
