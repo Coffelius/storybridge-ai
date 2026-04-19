@@ -1,6 +1,6 @@
 # StoryBridge AI
 
-[![CI](https://github.com/gabistuff/storybridge-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/gabistuff/storybridge-ai/actions/workflows/ci.yml)
+[![CI](https://github.com/Coffelius/storybridge-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/Coffelius/storybridge-ai/actions/workflows/ci.yml)
 
 StoryBridge AI is a narrative planning environment for authors, screenwriters
 and content creators. It is compatible with the Story Plotter export format
