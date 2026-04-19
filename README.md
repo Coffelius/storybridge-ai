@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StoryBridge AI
 
-## Getting Started
+StoryBridge AI is a narrative planning environment for authors, screenwriters
+and content creators. It is compatible with the Story Plotter export format
+and is designed to feed structured narrative context to Large Language
+Models (LLMs) such as GPT-4 or Claude, so that generated content stays
+coherent with the author's canon.
 
-First, run the development server:
+## Features
+
+- Import and export Story Plotter `.txt` / `.json` files with no data loss.
+- Folder tree navigation for browsing stories, plots and subprojects.
+- Detailed story view with sequence units (Opening, MainStory, Finale).
+- Character management with priority, tags and extensible parameters.
+- Edit mode for modifying stories and characters directly in the browser.
+- Local persistence via `localStorage`, no server required.
+
+## Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+
+## Quickstart
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open <http://localhost:3000> and import a Story Plotter `.txt` or
+`.json` export file.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Short term: solid OSS release (MIT, CI, contribution docs).
+Medium term: AI pipeline that compresses narrative context for LLM
+prompts and optional provider integrations.
 
-## Learn More
+See [`docs/VISION.md`](docs/VISION.md) for the full product vision
+(in Spanish).
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md)
+for setup, branch naming and PR process, and the
+[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Released under the [MIT License](LICENSE).
