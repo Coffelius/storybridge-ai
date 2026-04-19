@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Story Plotter Viewer",
-  description: "Browse and view Story Plotter export files",
+  title: "StoryBridge AI",
+  description: "Narrative planning environment compatible with Story Plotter and optimized for LLMs.",
 };
 
 export default function RootLayout({
