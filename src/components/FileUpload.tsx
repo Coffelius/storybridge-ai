@@ -66,6 +66,18 @@ export default function FileUpload() {
     }
   };
 
+  const handleLoadDemoData = async () => {
+    try {
+      const response = await fetch("/sample-data.txt");
+      if (!response.ok) throw new Error("Failed to load demo data");
+      const content = await response.text();
+      loadData(content);
+    } catch (error) {
+      console.error("Failed to load demo data:", error);
+      alert("Failed to load demo data. Please try again later.");
+    }
+  };
+
   const handleClearAndLoad = () => {
     if (
       hasUnsavedChanges &&
@@ -194,6 +206,22 @@ export default function FileUpload() {
           <p className="text-xs text-gray-400 mt-4">
             Supports .txt and .json export files from Story Plotter
           </p>
+
+          {/* Load Demo Data Button */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <p className="text-sm text-gray-600 mb-3">
+              Don&apos;t have a Story Plotter export?
+            </p>
+            <button
+              onClick={handleLoadDemoData}
+              className="px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors font-medium"
+            >
+              Load Demo Data
+            </button>
+            <p className="text-xs text-gray-400 mt-2">
+              Load an example story to explore the features
+            </p>
+          </div>
         </div>
 
         {/* Resume from storage */}

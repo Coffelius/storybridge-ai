@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/Coffelius/storybridge-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/Coffelius/storybridge-ai/actions/workflows/ci.yml)
 
+**🚀 Try the live demo:** [demo.storybridge.ai](https://demo.storybridge.ai)
+
 StoryBridge AI is a narrative planning environment for authors, screenwriters
 and content creators. It is compatible with the Story Plotter export format
 and is designed to feed structured narrative context to Large Language
@@ -26,6 +28,12 @@ coherent with the author's canon.
 
 ## Quickstart
 
+### Try the Demo
+
+Visit [demo.storybridge.ai](https://demo.storybridge.ai) to try StoryBridge AI without installing anything. Click "Load Demo Data" to explore the features with an example story.
+
+### Local Development
+
 ```bash
 npm install
 npm run dev
@@ -48,6 +56,14 @@ See [`docs/VISION.md`](docs/VISION.md) for the full product vision
 Contributions are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md)
 for setup, branch naming and PR process, and the
 [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
+
+## Deployment
+
+StoryBridge AI is deployed using Coolify on a VPS with a custom subdomain.
+
+For deployment instructions, see [`DEPLOYMENT.md`](DEPLOYMENT.md).
+
+**Demo URL:** [demo.storybridge.ai](https://demo.storybridge.ai)
 
 ## License
 

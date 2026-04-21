@@ -1,0 +1,56 @@
+# Coolify Deployment Configuration
+# This file can be used to configure automatic deployments via Coolify
+
+spec:
+  name: storybridge-ai
+  version: 1.0.0
+
+  # Build configuration
+  build:
+    builder: dockerfile
+    dockerfilePath: ./Dockerfile
+    context: .
+
+  # Environment variables (set these in Coolify UI)
+  # These are documented here for reference
+  env:
+    - name: NODE_ENV
+      value: production
+    - name: PORT
+      value: "3000"
+    - name: NEXT_TELEMETRY_DISABLED
+      value: "1"
+
+  # Health check
+  healthCheck:
+    http:
+      path: /
+      port: 3000
+      interval: 30s
+      timeout: 10s
+      failureThreshold: 3
+
+  # Resources (adjust based on your VPS)
+  resources:
+    limits:
+      memory: 512Mi
+    requests:
+      memory: 256Mi
+
+# Deployment Instructions for Coolify:
+#
+# 1. Create a new application in Coolify
+# 2. Connect your GitHub repository
+# 3. Select this branch
+# 4. Set the following:
+#    - Builder: Dockerfile
+#    - Dockerfile Path: ./Dockerfile
+#    - Port: 3000
+# 5. Configure your domain (e.g., demo.storybridge.ai)
+# 6. Deploy!
+#
+# The application will:
+# - Build automatically using the Dockerfile
+# - Run on port 3000 (internal)
+# - Serve the Next.js app with standalone output
+# - Include sample data for demo purposes
